@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+  
 
 jobs:
   build-module:
@@ -25,7 +27,7 @@ jobs:
 
       - name: Download HyperOS
         run: |
-          wget https://ultimateota.d.miui.com/OS3.0.319.0.WPCCNXM/pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip?t=1790327318&s=7bf61a03c6bfa54cf94add3c97a4f1bf
+          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS3.0.319.0.WPCCNXM/pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip
           unzip pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip payload.bin
           rm pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip
 
