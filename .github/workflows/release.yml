@@ -19,15 +19,15 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y erofs-utils erofsfuse wget unzip xz-utils
-          wget https://github.com/ssut/payload-dumper-go/releases/download/1.3.0/payload-dumper-go_1.3.0_linux_amd64.tar.gz
-          tar -xvf payload-dumper-go_1.3.0_linux_amd64.tar.gz
+          wget https://github.com/ssut/payload-dumper-go/releases/download/2.1.0/payload-dumper-go_2.1.0_linux_amd64.tar.gz
+          tar -xvf payload-dumper-go_2.1.0_linux_amd64.tar.gz
           chmod +x payload-dumper-go
 
       - name: Download HyperOS
         run: |
-          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS3.0.5.0.WNCCNXM/houji-ota_full-OS3.0.5.0.WNCCNXM-user-16.0-306ce971bf.zip
-          unzip houji-ota_full-OS3.0.5.0.WNCCNXM-user-16.0-306ce971bf.zip payload.bin
-          rm houji-ota_full-OS3.0.5.0.WNCCNXM-user-16.0-306ce971bf.zip
+          wget https://ultimateota.d.miui.com/OS3.0.319.0.WPCCNXM/pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip?t=1790327318&s=7bf61a03c6bfa54cf94add3c97a4f1bf
+          unzip pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip payload.bin
+          rm pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip
 
       - name: Unpack HyperOS
         run: |
@@ -43,7 +43,7 @@ jobs:
           cp -a ./product/app/MINextpay ./module/system/app/MINextpay
           cp -a ./product/app/MITSMClient ./module/system/app/MITSMClient
           cp -a ./product/app/UPTsmService ./module/system/app/UPTsmService
-          cp -a ./product/app/MIUISuperMarket ./module/system/app/MIUISuperMarket
+          # cp -a ./product/app/MIUISuperMarket ./module/system/app/MIUISuperMarket
           rm ./module/system/app/.gitkeep
 
       - name: Package module
