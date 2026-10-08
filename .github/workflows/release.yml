@@ -26,9 +26,9 @@ jobs:
 
       - name: Download HyperOS
         run: |
-          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS3.0.319.0.WPCCNXM/pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip
-          unzip pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip payload.bin
-          rm pudding-ota_full-OS3.0.319.0.WPCCNXM-user-16.0-95932c9372.zip
+          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS4.0.0.32.XPCCNXM/pudding-ota_full-OS4.0.0.32.XPCCNXM-user-17.0-f9afe18d6e.zip
+          unzip *.zip payload.bin
+          rm *.zip
 
       - name: Unpack HyperOS
         run: |
@@ -41,9 +41,9 @@ jobs:
 
       - name: Assemble module
         run: |
-          cp -a ./product/app/MINextpay ./module/system/app/MINextpay
-          cp -a ./product/app/MITSMClient ./module/system/app/MITSMClient
-          cp -a ./product/app/UPTsmService ./module/system/app/UPTsmService
+          cp -a ./product/app/MINextpay ./module/product/app/MINextpay
+          cp -a ./product/app/MITSMClient ./module/product/app/MITSMClient
+          cp -a ./product/app/UPTsmService ./module/product/app/UPTsmService
           # cp -a ./product/app/MIUISuperMarket ./module/system/app/MIUISuperMarket
           rm ./module/system/app/.gitkeep
 
