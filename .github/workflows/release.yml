@@ -41,12 +41,13 @@ jobs:
 
       - name: Assemble module
         run: |
+          mkdir -p ./module/product/app
           cp -a ./product/app/MINextpay ./module/product/app/MINextpay
           cp -a ./product/app/MITSMClient ./module/product/app/MITSMClient
           cp -a ./product/app/UPTsmService ./module/product/app/UPTsmService
           # cp -a ./product/app/MIUISuperMarket ./module/system/app/MIUISuperMarket
-          rm ./module/system/app/.gitkeep
-
+          rm -rf ./module/system
+          
       - name: Package module
         run: |
           cd module/
