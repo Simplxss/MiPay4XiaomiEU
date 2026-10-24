@@ -26,7 +26,7 @@ jobs:
 
       - name: Download HyperOS
         run: |
-          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS4.0.0.32.XPCCNXM/pudding-ota_full-OS4.0.0.32.XPCCNXM-user-17.0-f9afe18d6e.zip
+          wget https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS4.0.4.0.XPCCNXM/pudding_images_OS4.0.4.0.XPCCNXM_20261015.0000.00_17.0_cn_3cef583e46.tgz
           unzip *.zip payload.bin
           rm *.zip
 
